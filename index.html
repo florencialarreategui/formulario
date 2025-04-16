@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="logo">
+            🍕
+        </div>
+        <form id="pedidoForm">
+            <h2>Formulario de Pedido de presupuesto/h2>
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="fecha">Para cuando es el pedido:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="Librería">Seleccionar producto:</label>
+                <select id="productos" name="productos" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="Agendas">Agendas</option>
+                    <option value="Libretas">Libretas</option>
+                    <option value="Anotadores">Anotadores</option>
+                    <option value="Cuadernos">Cuadernos</option>
+                </select>
+
+                <label>Tamaño:</label>
+                <input type="radio" name="tamaño" value="A4" checked> A4
+                <input type="radio" name="tamaño" value="A5"> A5
+                <input type="radio" name="tamaño" value="A6"> A6
+
+                <label>Características:</label>
+                <input type="checkbox" name="elastico" value="elastico"> Elástico
+                <input type="checkbox" name="anillado" value="anillado"> Anillado
+
+
+                <label for="comentarios">Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+                <button type="submit">Enviar consulta</button>
+
+                <div class="resultado" id="resultado"></div>
+        </form>
+        <div class="aside">
+            <img src="img/Porfolio.png" alt="">
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
