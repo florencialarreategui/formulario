@@ -4,7 +4,7 @@ document.getElementById('pedidoForm').addEventListener('submit', function (e) {
     const nombre = document.getElementById('nombre').value;
     const articulo = document.getElementById('productos').value;
     const tamaño = document.querySelector('input[name="tamaño"]:checked').value;
-    const extras = Array.from(document.querySelectorAll('input[name="anillado"]:checked')).map(cb => cb.value);
+    const extras = Array.from(document.querySelectorAll('input[name="extras"]:checked')).map(cb => cb.value);
     const comentarios = document.getElementById('comentarios').value;
 
     let mensaje = `¡Gracias, ${nombre}! Has pedido una ${articulo} tamaño ${tamaño}.`;
