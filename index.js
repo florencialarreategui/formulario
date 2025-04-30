@@ -1,3 +1,4 @@
+const img = document.querySelector('.silueta');
 document.getElementById('pedidoForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -15,7 +16,6 @@ document.getElementById('pedidoForm').addEventListener('submit', function (e) {
     if (comentarios.trim() !== "") {
         mensaje += ` Comentarios: "${comentarios}".`;
     }
-
 
     localStorage.setItem('mensajePedido', mensaje);
    
