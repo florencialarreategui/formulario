@@ -6,14 +6,19 @@ document.getElementById('pedidoForm').addEventListener('submit', function (e) {
     const tamaño = document.querySelector('input[name="tamaño"]:checked').value;
     const extras = Array.from(document.querySelectorAll('input[name="extras"]:checked')).map(cb => cb.value);
     const comentarios = document.getElementById('comentarios').value;
+    const cantidad= document.getElementById('cantidad').value;
 
-    let mensaje = `¡Gracias, ${nombre}! Has pedido una ${articulo} tamaño ${tamaño}.`;
+    let mensaje = `¡Gracias, ${nombre}! Has pedido presupuesto por ${cantidad} ${articulo} tamaño ${tamaño}.`;
     if (extras.length > 0) {
-        mensaje += ` Extras: ${extras.join(', ')}.`;
+        mensaje += ` con ${extras.join(' y ')}.`;
     }
     if (comentarios.trim() !== "") {
         mensaje += ` Comentarios: "${comentarios}".`;
     }
 
-    document.getElementById('resultado').textContent = mensaje;
+
+    localStorage.setItem('mensajePedido', mensaje);
+   
+    window.location.href = 'pedidos.html';
 });
+
