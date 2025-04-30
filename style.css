@@ -1,131 +1,146 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .container {
-    display: flex;
-    gap: 1px;
-    padding: 40px;
-    flex-wrap: wrap; 
-    justify-content: center;
-  }
-  
-  .div-form {
-    max-width: 400px;
-    width: 100%;
-    background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 1px;
+  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.div-form {
+  max-width: 400px;
+  width: 100%;
+  background-color: #f0f2f5;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+form h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #F18A54;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(102, 27, 122);
+}
+
+.div-tamaño,
+.div-caracteristicas {
+  display: flex;
+}
+
+
+.aside {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  background-image: url('img/fondo-img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 400px;
+  height: auto;
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+}
+
+.aside img {
+  filter: drop-shadow(0 -10px 10px rgba(114, 37, 105, 0.6)) drop-shadow(0 -15px 20px rgba(186, 85, 211, 0.4)) drop-shadow(0 -25px 40px rgba(186, 85, 211, 0.2));
+  width: 400px;
+  animation: brilloSilueta 2s infinite ease-in-out;
+}
+
+@keyframes brilloSilueta {
+  0% {
+    box-shadow: 0 0 5px #00cc88;
 
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+
+  50% {
+    box-shadow: 0 0 20px #00ffae;
+
   }
-  
-  form h2 {
-    margin-bottom: 10px;
-    color: #333;
+
+  100% {
+    box-shadow: 0 0 5px #00cc88;
   }
-  
-  input[type="text"],
-  input[type="date"],
-  input[type="number"],
-  select,
-  textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+}
+
+@media (max-width: 935px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 30px 20px;
   }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
-  button {
-    padding: 10px; 
-    background-color: #F18A54;
-    color: white;
-    border: none; 
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color:rgb(102, 27, 122);
-  }
-  
-  .div-tamaño,
-  .div-caracteristicas {
-    display: flex;
-  }
-  
 
   .aside {
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    background-image: url('img/fondo-img.jpg');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el aside */
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 400px;
-    height: auto;
-    filter: brightness(1.1) contrast(1.1) saturate(1.2);
-}
-.aside img{
-  filter: drop-shadow(0 -10px 10px rgba(114, 37, 105, 0.6))  /* sombra solo hacia arriba */
-          drop-shadow(0 -15px 20px rgba(186, 85, 211, 0.4))
-          drop-shadow(0 -25px 40px rgba(186, 85, 211, 0.2));
-  width: 400px;
-}
-  
-
-  @media (max-width: 935px) {
-    .container {
-      flex-direction: column-reverse;
-      align-items: center;
-      padding: 30px 20px;
-    }
-  
-    .aside {
-      width: 100%;
-      margin-top: 30px;
-    }
-
-    .aside img{
-      margin-top: 20px;
-
-    }
-  
-    .div-form {
-      max-width: 100%;
-    }
+    width: 100%;
+    margin-top: 30px;
   }
-  
-  @media (max-width: 480px) {
-    form h2 {
-      font-size: 20px;
-    }
-  
-    .aside h1 {
-      font-size: 20px;
-    }
-  
-    button {
-      font-size: 16px;
-    }
+
+  .aside img {
+    margin-top: 20px;
+
   }
+
+  .div-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  form h2 {
+    font-size: 20px;
+  }
+
+  .aside h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
