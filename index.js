@@ -9,7 +9,7 @@ document.getElementById('pedidoForm').addEventListener('submit', function (e) {
     const comentarios = document.getElementById('comentarios').value;
     const cantidad= document.getElementById('cantidad').value;
 
-    let mensaje = `¡Gracias, ${nombre}! Has pedido presupuesto por ${cantidad} ${articulo} tamaño ${tamaño}.`;
+    let mensaje = `¡Gracias, ${nombre}! Has pedido presupuesto por ${cantidad} ${articulo} tamaño ${tamaño}`;
     if (extras.length > 0) {
         mensaje += ` con ${extras.join(' y ')}.`;
     }

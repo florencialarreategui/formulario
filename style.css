@@ -88,6 +88,11 @@ button:hover {
 }
 .aside img {
 width: 400px;
+animation: resplandor 7s infinite alternate ease-in-out;
+}
+
+.estrella{
+  width: 700px;
 animation: resplandor 4s infinite alternate ease-in-out;
 }
 
